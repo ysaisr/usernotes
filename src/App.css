@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
   display: flex;
-  flex-direction: column;
+}
+
+.sidebar {
+  width: 25%;
+  background-color: #f5f5f5;
+  padding: 20px 0;
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  margin: 20px 0 20px 0; 
+  font-weight: 600;
+  letter-spacing: 2%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.group-list{
+  cursor: pointer;
+}
+
+.group-item{
+  gap:20px;
+  display:flex;
+  justify-content: start;
+  align-items:center;
+  margin: 20px 20px;
+}
+
+.group-item:hover{
+  background-color: #2F2F2F2B;
+}
+
+.group-icon{
+  height:45px;
+  width:45px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.add-button {
+  position: absolute;
+  bottom: 20px;
+  left: 250px;
+  background-color:#16008B;
   color: white;
+  font-size: 45px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.main-content {
+  width: 75%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:#DAE5F5;
+  flex-grow: 1;
+  overflow-y:auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.noteimg {
+  margin-bottom: 20px;
+}
+
+.text-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 58.59px;
+  letter-spacing: 0.02em;
+}
+
+.text-content p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 0.02em;
+  color: #292929;
+}
+
+.end-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #292929;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.02em;
+  position: absolute;
+  bottom: 16px;
+  left: 670px; 
+}
+
+@media (max-width: 750px) {
+  .app {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .sidebar {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main-content, .group-page{
+    display: none; 
+  }
+
+  
+  .app.group-selected .sidebar {
+    display: none; 
+  }
+
+  .app.group-selected .main-content,
+  .app.group-selected .group-page {
+    display: block;
+    width: 100%;
+    height: 100vh;
   }
 }

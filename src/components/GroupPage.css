@@ -1,0 +1,90 @@
+.group-page{
+  width:75%;
+  height:100vh;
+  background-color:#DAE5F5;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar{
+  height: 60px;
+  width: 100%;
+  color:white;
+  background-color: #001F8B;
+  display:flex;
+  align-items: center;
+  padding-left: 20px;
+  gap:10px;
+  position: fixed;
+  border-bottom: 2px solid white;
+}
+
+.group-content{
+  flex-grow: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 20px);
+  padding: 70px 20px 150px 20px;
+}
+
+.note{
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+  display: block;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.note span {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  font-size: 12px;
+  color:#666;
+}
+
+.text-container{
+  width:75%;
+  height:150px;
+  background-color:#001F8B;
+  position: fixed;
+  bottom: 0;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid white;
+}
+
+.message-input{
+  height: 130px;
+  width:95%;
+  font-size: 18px;
+  padding: 15px;
+  border: none;
+  resize: none;
+  border-radius: 10px;
+}
+
+.send{
+  /* z-index: 2; */
+  position:absolute;
+  bottom:18px;
+  right: 30px;
+  border:none;
+  background-color: white;
+  cursor:pointer;
+}
+
+.send:disabled {
+  background-color: #aaa;
+  cursor:not-allowed;
+}
+
+@media (max-width: 768px) {
+    .text-container {
+    width: 100%;
+    max-width: 100vw;
+  }
+}  
