@@ -82,7 +82,7 @@
   cursor:not-allowed;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 720px) {
     .text-container {
     width: 100%;
     max-width: 100vw;
