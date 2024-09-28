@@ -94,7 +94,7 @@
   background-color:#001F8B;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 700px) {
   .Design-container {
     width: 85%;
     max-width: 100%;

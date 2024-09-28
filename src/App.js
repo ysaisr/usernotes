@@ -36,6 +36,10 @@ function App() {
     closeDesign();  
   };
 
+  const handleBackToSidebar = () => {
+    setSelectedGroup(null); 
+  };
+
   const openGroupClick = (group) => {
     setSelectedGroup(group);
   };
@@ -71,7 +75,8 @@ function App() {
       {selectedGroup ? (
         <GroupPage 
           selectedGroup={selectedGroup}
-          updateGroupNotes={updateGroupNotes} />
+          updateGroupNotes={updateGroupNotes} 
+          onBackToSidebar={handleBackToSidebar}/>
       ) : (
         <div className="main-content">
           <div className="noteimg">
